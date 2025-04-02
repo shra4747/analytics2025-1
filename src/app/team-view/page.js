@@ -246,21 +246,21 @@ function TeamView() {
     }
 
     const Colors = [
-        //light to dark
-        ["#CCFBF7", "#76E3D3", "#18a9a2", "#117772"], //green
-        ["#D7F2FF", "#7dd4ff", "#38b6f4", "#0A6D9F"], //blue
-        ["#D7D8FF", "#a0a3fb", "#8488FF", "#2022AA"], //blue-purple
-        ["#F3D8FB", "#DBA2ED", "#C37DDB", "#8E639C"], //pink-purple
-        ["#FFDDF3", "#EDA2DB", "#DD64C0", "#9C6392"], //pink
+        //light to dark (modified to black and red theme)
+        ["#FFE5E5", "#FF9999", "#FF0000", "#CC0000"], //red
+        ["#E6E6E6", "#999999", "#333333", "#000000"], //black
+        ["#FFD9D9", "#FF6666", "#CC0000", "#990000"], //darker red
+        ["#D9D9D9", "#666666", "#1A1A1A", "#000000"], //another black
+        ["#FFCCCC", "#FF3333", "#CC0000", "#800000"], //deepest red
     ];
 
     const epaColors = {
-      red1: "#fa8888",
-      red2: "#F7AFAF",
-      yellow1: "#ffe16b",
-      yellow2: "#ffff9e",
-      green1: "#7FD689",
-      green2: "#c4f19f",
+        red1: "#FF0000",     // bright red
+        red2: "#CC0000",     // darker red
+        yellow1: "#1A1A1A",  // very dark gray (replacing yellow with dark)
+        yellow2: "#333333",  // dark gray
+        green1: "#000000",   // black (replacing green)
+        green2: "#4D4D4D",   // medium gray
     }
 
     //overall last3epa

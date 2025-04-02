@@ -123,7 +123,7 @@ export async function POST(request) {
   // Fetch and integrate TBA rankings
   async function getTBARankings() {
     try {
-      const response = await fetch(`https://www.thebluealliance.com/api/v3/event/2025casd/rankings`, {
+      const response = await fetch(`https://www.thebluealliance.com/api/v3/event/2025njski/rankings`, {
         headers: {
           'X-TBA-Auth-Key': process.env.TBA_AUTH_KEY,
           'Accept': 'application/json'
