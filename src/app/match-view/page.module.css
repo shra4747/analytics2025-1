@@ -62,6 +62,8 @@
     padding: 10px;
     gap: 5px;
     flex-wrap: wrap;
+    background-color: #000000;
+    border-bottom: 2px solid #FF0000;
 }
 
 .allianceBoard {
@@ -72,17 +74,21 @@
 }
 
 .matchNav button {
-    border: 1px solid black;
+    border: 1px solid #FF0000;
     padding: 3px 15px;
     padding-bottom: 0px;
     border-radius: 5px;
     font-size: 45px;
     font-family: "Teko", sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: all 0.3s ease;
 }
 
 .matchNav button:hover {
-    background: black !important;
-    color: yellow !important;
+    background: #FF0000 !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF;
 }
 
 .allianceEPAs {

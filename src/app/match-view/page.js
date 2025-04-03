@@ -110,7 +110,7 @@ function MatchView() {
   // // Static data instead of fetching
   // const data = {
   //   team1: {
-  //     team: 2485,
+  //     team: 75,
   //     teamName: "Overclocked",
   //     auto: 30,
   //     tele: 22,

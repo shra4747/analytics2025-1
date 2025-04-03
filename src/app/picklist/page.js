@@ -67,7 +67,7 @@ export default function Picklist() {
     // Static data
     // const picklist = [
     //   {
-    //     team: 2485,
+    //     team: 75,
     //     score: 0.95,
     //     firstRanking: 4,
     //     epa: 0.9,

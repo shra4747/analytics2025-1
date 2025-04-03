@@ -6,7 +6,7 @@ import NavBar from './form-components/NavBar.js'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Team 2485 Analytics App',
+  title: 'Team 75 Analytics App',
   description: 'For scouting and analysis of the FIRST game.',
 }
 

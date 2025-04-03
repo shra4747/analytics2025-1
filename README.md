@@ -81,7 +81,7 @@ INSERT INTO phr2025 (
 )
 VALUES
 (
-   'John Doe', 2485, 4909, 12, 2, FALSE, FALSE, TRUE,
+   'John Doe', 75, 4909, 12, 2, FALSE, FALSE, TRUE,
    3, 1, 2, 0, 1, 2, 3, 0,
    1, 2, 1, 3, 0,
    4, 2, 3, 1, 2, 3, 3, 0,
