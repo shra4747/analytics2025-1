@@ -15,6 +15,7 @@ export default function NavBar() {
     return <nav className={styles.navbar}>
         <img className={styles.logo} src="/Team75LogoVUSE.png"></img>
         <div className={styles.pages}>
+            <Link href="/">Scouting Form</Link>
             <Link href="/team-view">Team View</Link>
             <Link href="/match-view">Match View</Link>
             <Link href="/picklist">Picklist</Link>
