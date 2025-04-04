@@ -362,6 +362,19 @@ console.log("page",matchType)
                 </table>
                 </div>
               </div>
+              <div className={styles.HumanPlayer}>
+              <SubHeader subHeaderName={"Coral Station Intake Attempt"}/>
+              <div className={styles.HBox}>
+                  <NumericInput 
+                    visibleName={"Success"}
+                    pieceType={"Success"}
+                    internalName={"hpsuccess"}/>
+                  <NumericInput 
+                    visibleName={"Fail"}
+                    pieceType={"Fail"}
+                    internalName={"hpfail"}/>
+                </div>
+              </div>
               <div className={styles.AlgaeRemoved}>
                 <SubHeader subHeaderName={"Algae Removed Intentionally"}/>
                 <div className={styles.HBox}>
@@ -396,22 +409,7 @@ console.log("page",matchType)
                       internalName={"telenetfail"}/>
                 </div>
               </div>
-              <div className={styles.HumanPlayer}>
-              <SubHeader subHeaderName={"Human Player"}/>
-              <Checkbox visibleName={"Human Player From Team?"} internalName={"humanplayer"} changeListener={onHumanPlayerChange}/>
-              { humanplayer &&
-                <div className={styles.HBox}>
-                  <NumericInput 
-                    visibleName={"Success"}
-                    pieceType={"Success"}
-                    internalName={"hpsuccess"}/>
-                  <NumericInput 
-                    visibleName={"Fail"}
-                    pieceType={"Fail"}
-                    internalName={"hpfail"}/>
-                </div>
-              }
-              </div>
+              
             <div className={styles.Endgame}>
               <Header headerName={"Endgame"}/>
               <EndPlacement/>
@@ -432,7 +430,7 @@ console.log("page",matchType)
                 />
                 <Checkbox
                   visibleName={"Lollipop"}
-                  internalName={"algaegndintake"}
+                  internalName={"lollipop"}
                 />
                 <Checkbox
                   visibleName={"Algae Ground"}
