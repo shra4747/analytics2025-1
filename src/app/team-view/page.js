@@ -246,22 +246,22 @@ function TeamView() {
     }
 
     const Colors = [
-        // Updated to black, red, white theme
-        ["#FFFFFF", "#FF9999", "#FF0000", "#000000"], // white, light red, red, black
-        ["#FFFFFF", "#999999", "#333333", "#000000"], // white, gray, dark gray, black
-        ["#FFFFFF", "#FF6666", "#CC0000", "#000000"], // white, red, darker red, black
-        ["#FFFFFF", "#666666", "#1A1A1A", "#000000"], // white, gray, dark gray, black
-        ["#FFFFFF", "#FF3333", "#CC0000", "#000000"], // white, red, darker red, black
-    ];
+      //light to dark
+      ["#CCFBF7", "#76E3D3", "#18a9a2", "#117772"], //green
+      ["#D7F2FF", "#7dd4ff", "#38b6f4", "#0A6D9F"], //blue
+      ["#D7D8FF", "#a0a3fb", "#8488FF", "#2022AA"], //blue-purple
+      ["#F3D8FB", "#DBA2ED", "#C37DDB", "#8E639C"], //pink-purple
+      ["#FFDDF3", "#EDA2DB", "#DD64C0", "#9C6392"], //pink
+  ];
 
-    const epaColors = {
-        red1: "#FF0000",     // bright red
-        red2: "#CC0000",     // darker red
-        yellow1: "#FFFFFF",  // white (replacing yellow)
-        yellow2: "#F0F0F0",  // light gray
-        green1: "#000000",   // black (replacing green)
-        green2: "#333333",   // dark gray
-    }
+  const epaColors = {
+    red1: "#fa8888",
+    red2: "#F7AFAF",
+    yellow1: "#ffe16b",
+    yellow2: "#ffff9e",
+    green1: "#7FD689",
+    green2: "#c4f19f",
+  }
 
     //overall last3epa
     let overallLast3 = epaColors.yellow1;
@@ -296,12 +296,12 @@ function TeamView() {
           <TopBar></TopBar>
         <div className={styles.MainDiv}>
             <div className={styles.leftColumn}>
-                <h1 style={{ color: Colors[0][3], backgroundColor: Colors[0][0], padding: '5px', borderRadius: '5px' }}>Team {data.team} View</h1>
+                <h1 style={{ color: Colors[0][3], padding: '5px', borderRadius: '5px' }}>Team {data.team} View</h1>
                 <h3>{data.name}</h3>
                 <div className={styles.EPAS}>
                     <div className={styles.EPA}>
                         <div className={styles.scoreBreakdownContainer}>
-                            <div style={{ background: Colors[0][1], color: Colors[0][3] }} className={styles.epaBox}>{Math.round(10*data.avgEpa)/10}</div>
+                            <div style={{ background: Colors[0][1] }} className={styles.epaBox}>{Math.round(10*data.avgEpa)/10}</div>
                             <div className={styles.epaBreakdown}>
                                 <div style={{ background: Colors[0][0], color: Colors[0][3] }}>A: {Math.round(10*data.avgAuto)/10}</div>
                                 <div style={{ background: Colors[0][0], color: Colors[0][3] }}>T: {Math.round(10*data.avgTele)/10}</div>
