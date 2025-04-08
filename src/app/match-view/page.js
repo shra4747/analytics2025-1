@@ -359,16 +359,16 @@ function AllianceButtons({t1, t2, t3, colors}) {
     }
     //win = higher espm than opponents
     const teamEPA = (team) => team ? team.auto + team.tele + team.end : 0;
-    const opponentsEPA = teamEPA(opponents[0]) + teamEPA(opponents[1]) + teamEPA(opponents[2]);
-    const currentAllianceEPA = auto + tele + end;
+    const opponentsEPA = Math.floor(teamEPA(opponents[0]) + teamEPA(opponents[1]) + teamEPA(opponents[2]));
+    const currentAllianceEPA = Math.floor(auto + tele + end);
     let RP_WIN = RGBColors.red;
     if (currentAllianceEPA > opponentsEPA) RP_WIN = RGBColors.green;
     else if (currentAllianceEPA == opponentsEPA) RP_WIN = RGBColors.yellow;
 
     //auto rp = all robots leave and alliance scores one coral
-    const allianceCoral = Math.floor(teams[0].autoCoral) + Math.floor(teams[1].autoCoral) + Math.floor(teams[2].autoCoral);
-    let RP_AUTO = RGBColors.red;
-    if ((allianceCoral >= 1) && (teams[0].leave == true) && (teams[1].leave == true) && (teams[2].leave == true)) RP_AUTO = RGBColors.green;
+    const allianceCoral = Math.floor(teams[0].auto) + Math.floor(teams[1].auto) + Math.floor(teams[2].auto);
+    let RP_AUTO = RGBColors.red;  
+    if ((allianceCoral > 1)) RP_AUTO = RGBColors.green;
 
     //coral rp = 5 coral scored on each level (5 on 3 levels is yellow)
     const allianceL1 = teams[0].avgPieces.L1 + teams[1].avgPieces.L1 + teams[2].avgPieces.L1;
@@ -377,17 +377,17 @@ function AllianceButtons({t1, t2, t3, colors}) {
     const allianceL4 = teams[0].avgPieces.L4 + teams[1].avgPieces.L4 + teams[2].avgPieces.L4;
     let RP_CORAL = RGBColors.red;
     const conditions = [
-      allianceL1 >= 5,
-      allianceL2 >= 5,
-      allianceL3 >= 5,
-      allianceL4 >= 5
+      allianceL1 >= 7,
+      allianceL2 >= 7,
+      allianceL3 >= 7,
+      allianceL4 >= 7
     ];
     //count the number of true conditions
     const trueCount = conditions.filter(Boolean).length;
     //if all 4 conditions are true
-    if (trueCount == 4) RP_CORAL = RGBColors.green;
+    if (trueCount == 3) RP_CORAL = RGBColors.green;
     //if 3 conditions are true
-    else if (trueCount == 3) RP_CORAL = RGBColors.yellow;
+    else if (trueCount == 2) RP_CORAL = RGBColors.yellow;
   
     //barge rp = 14 points in the barge
     const endgamePoints = Math.floor(teams[0].end) + Math.floor(teams[1].end) + Math.floor(teams[2].end)
@@ -396,12 +396,12 @@ function AllianceButtons({t1, t2, t3, colors}) {
 
     return <div className={styles.lightBorderBox}>
       <div className={styles.scoreBreakdownContainer}>
-        <div style={{background: colors[0]}} className={styles.EPABox}>{Math.round(10*auto)/10 + Math.round(10*tele)/10 + Math.round(10*end)/10}</div>
+        <div style={{background: colors[0]}} className={styles.EPABox}>{Math.floor(Math.round(10*auto)/10 + Math.round(10*tele)/10 + Math.round(10*end)/10)}</div>
         <div className={styles.EPABreakdown}>
           <div style={{background: colors[1]}}>A: {Math.round(10*auto)/10}</div>
-          <div style={{background: colors[1]}}>T: {Math.round(10*tele)/10}</div>
+          <div style={{background: colors[1]}}>T: {Math.round(10*tele)/10}</div>  
           <div style={{background: colors[1]}}>E: {Math.round(10*end)/10}</div>
-        </div>
+        </div>  
       </div>
       <div className={styles.RPs}>
         <div style={{background: colors[1]}}>RPs:</div>
@@ -449,8 +449,8 @@ function AllianceButtons({t1, t2, t3, colors}) {
           L2={Math.round(10*teamData.avgPieces.L2)/10}
           L3={Math.round(10*teamData.avgPieces.L3)/10} 
           L4={Math.round(10*teamData.avgPieces.L4)/10} 
-          net={Math.round(10*teamData.avgPieces.net)/10}
-          processor={Math.round(10*teamData.avgPieces.processor)/10}
+          net={Math.round(10*teamData.avgPieces.processor)/10}
+          processor={Math.round(10*teamData.avgPieces.net)/10}
           HP={Math.round(10*teamData.avgPieces.HP)/10}
         />
       </div>

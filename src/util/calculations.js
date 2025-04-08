@@ -25,7 +25,7 @@ function calcAuto(record) {
   function calcEnd(record) {
     const roundedEndLocation = Math.round(record.endlocation); // Ensure it's an integer
 
-    console.log(`Calculating Endgame Points for endlocation ${record.endlocation} (rounded to ${roundedEndLocation})`);
+    // console.log(`Calculating Endgame Points for endlocation ${record.endlocation} (rounded to ${roundedEndLocation})`);
 
     let endgamePoints = 0;
 
