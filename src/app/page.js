@@ -207,7 +207,7 @@ console.log("page",matchType)
           <>
             <div className={styles.Auto}>
               <Header headerName={"Auto"}/>
-              <Checkbox visibleName={"Leave"} internalName={"leave"} />
+              <Checkbox visibleName={"Left Starting Line in Auto"} internalName={"leave"} />
               <div className={styles.Coral}>
                 <SubHeader subHeaderName={"Coral"}/>
                 <table className={styles.Table}>
@@ -275,19 +275,6 @@ console.log("page",matchType)
                     internalName={"autoalgaeremoved"}/>
                 </div>
               </div>
-              <div className={styles.Processor}>
-                <SubHeader subHeaderName={"Processor"} />
-                <div className={styles.HBox}>
-                  <NumericInput 
-                    visibleName={"Success"}
-                    pieceType={"Success"}
-                    internalName={"autoprocessorsuccess"}/>
-                  <NumericInput 
-                    visibleName={"Fail"}
-                    pieceType={"Fail"}
-                    internalName={"autoprocessorfail"}/>
-                </div>
-              </div>
               <div className={styles.Net}>
                 <SubHeader subHeaderName={"Net"} />
                 <div className={styles.HBox}>
@@ -301,6 +288,20 @@ console.log("page",matchType)
                     internalName={"autonetfail"}/>
                 </div>
               </div>
+              <div className={styles.Processor}>
+                <SubHeader subHeaderName={"Processor"} />
+                <div className={styles.HBox}>
+                  <NumericInput 
+                    visibleName={"Success"}
+                    pieceType={"Success"}
+                    internalName={"autoprocessorsuccess"}/>
+                  <NumericInput 
+                    visibleName={"Fail"}
+                    pieceType={"Fail"}
+                    internalName={"autoprocessorfail"}/>
+                </div>
+              </div>
+              
             <div className={styles.Auto}>
               <Header headerName={"Tele"}/>
               <div className={styles.Coral}>
@@ -383,19 +384,6 @@ console.log("page",matchType)
                     internalName={"telealgaeremoved"}/>
                 </div>
               </div>
-              <div className={styles.Processor}>
-                <SubHeader subHeaderName={"Processor"} />
-                <div className={styles.HBox}>
-                  <NumericInput 
-                    visibleName={"Success"}
-                    pieceType={"Success"}
-                    internalName={"teleprocessorsuccess"}/>
-                  <NumericInput 
-                    visibleName={"Fail"}
-                    pieceType={"Fail"}
-                    internalName={"teleprocessorfail"}/>
-                </div>
-              </div>
               <div className={styles.Net}>
                 <SubHeader subHeaderName={"Net"} />
                 <div className={styles.HBox}>
@@ -409,6 +397,20 @@ console.log("page",matchType)
                       internalName={"telenetfail"}/>
                 </div>
               </div>
+              <div className={styles.Processor}>
+                <SubHeader subHeaderName={"Processor"} />
+                <div className={styles.HBox}>
+                  <NumericInput 
+                    visibleName={"Success"}
+                    pieceType={"Success"}
+                    internalName={"teleprocessorsuccess"}/>
+                  <NumericInput 
+                    visibleName={"Fail"}
+                    pieceType={"Fail"}
+                    internalName={"teleprocessorfail"}/>
+                </div>
+              </div>
+              
               
             <div className={styles.Endgame}>
               <Header headerName={"Endgame"}/>

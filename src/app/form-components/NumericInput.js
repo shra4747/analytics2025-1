@@ -8,9 +8,33 @@ export default function NumericInput({ visibleName, internalName, pieceType, min
 
     const [value, setValue] = useState(0);
 
+    function checkAutoTotal() {
+        if (internalName.startsWith('auto')) {
+            const autoFields = [
+                'autol1success', 'autol1fail',
+                'autol2success', 'autol2fail',
+                'autol3success', 'autol3fail',
+                'autol4success', 'autol4fail'
+            ];
+            
+            const total = autoFields.reduce((sum, field) => {
+                const input = document.querySelector(`input[name="${field}"]`);
+                const val = input ? +input.value : 0;
+                return sum + val;
+            }, 0);
+            
+            if (total > 4) {
+                return confirm("Are you sure this is in Autonomous? The total coral attempts seem high. Please fix it if scoring is wrong.");
+            }
+        }
+        return true;
+    }
+
     function increment() {
         if (value + 1 <= max) {
-            setValue(value + 1);
+            if (checkAutoTotal()) {
+                setValue(value + 1);
+            }
         }
     }
 
